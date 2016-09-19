@@ -1,0 +1,13 @@
+#comment
+FLAG=-std=c++0x -c -w -g
+CC=g++
+
+a.out:converge.o
+	$(CC) converge.o
+
+converge.o:converge.cc
+	$(CC) $(FLAG) converge.cc
+    
+clean:
+	rm ./*.o
+	rm ./a.out
